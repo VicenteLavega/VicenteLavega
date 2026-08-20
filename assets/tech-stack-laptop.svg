@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Tech Stack</title>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0D1117"/>
+  <rect x="14" y="14" width="36" height="25" rx="3" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M9 44h46l-4.5 6H13.5L9 44Z" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M24 23l-4 4 4 4M40 23l4 4-4 4M35 21l-6 12" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
