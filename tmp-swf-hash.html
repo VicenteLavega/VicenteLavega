@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Temporary SWF identity check</title>
+<pre id="out">starting</pre>
+<script>
+(async () => {
+  const out = document.getElementById('out');
+  const source = 'https://sasszem.ddns.net/jatek/battle-gear-29615ed4.swf';
+  const candidates = [
+    source,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(source)}`,
+    `https://corsproxy.io/?url=${encodeURIComponent(source)}`,
+    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(source)}`,
+  ];
+  const errors = [];
+  for (const url of candidates) {
+    try {
+      out.textContent = `fetching ${url}`;
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', bytes));
+      const sha256 = [...digest].map((value) => value.toString(16).padStart(2, '0')).join('');
+      const signature = String.fromCharCode(...bytes.slice(0, 3));
+      out.textContent = JSON.stringify({ ok: true, source, fetchedVia: url, bytes: bytes.length, signature, version: bytes[3], sha256 }, null, 2);
+      return;
+    } catch (error) {
+      errors.push({ url, error: String(error) });
+    }
+  }
+  out.textContent = JSON.stringify({ ok: false, errors }, null, 2);
+})();
+</script>
