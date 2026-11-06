@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="185" height="50" viewBox="0 0 185 50" role="img" aria-label="Contacto">
-  <style>
-    .heading { fill: #1e293b; font-family: 'Trebuchet MS', 'Verdana', 'Arial', sans-serif; font-weight: 700; }
-    @media (prefers-color-scheme: dark) { .heading { fill: #f1f5f9; } }
-  </style>
-  <text class="heading" x="0" y="37" font-size="35" letter-spacing="-0.8">Contacto</text>
-</svg>
