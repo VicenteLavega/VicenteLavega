@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="72" viewBox="0 0 620 72" role="img" aria-label="Contacto">
+<svg xmlns="http://www.w3.org/2000/svg" width="185" height="50" viewBox="0 0 185 50" role="img" aria-label="Contacto">
   <style>
     .heading { fill: #1e293b; font-family: 'Trebuchet MS', 'Verdana', 'Arial', sans-serif; font-weight: 700; }
     @media (prefers-color-scheme: dark) { .heading { fill: #f1f5f9; } }
   </style>
-  <rect x="0" y="13" width="5" height="40" rx="2.5" fill="#8b5cf6"/>
-  <text class="heading" x="23" y="46" font-size="35" letter-spacing="-0.8">Contacto</text>
-  <path d="M23 59 H156" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+  <text class="heading" x="0" y="37" font-size="35" letter-spacing="-0.8">Contacto</text>
 </svg>
